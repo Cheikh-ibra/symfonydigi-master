@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+        <style>
+            body{
+                margin: 0;
+                min-height: 100vh;
+                display: grid;
+                grid-template-rows: max-content 1fr;
+            }
+            header{
+                display: flex;
+                justify-content: space-around;
+                background-color: #2b2b2b;
+            }
+            header .logo{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                color: #e7e7e7;
+            }
+            header ul{
+            display: flex;
+            }
+                header ul li{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    list-style-type: none;
+                    background-color: #e7e7e7;
+                    height: 50px;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    min-width: 80px;
+                    text-align: center;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+            header ul li:hover{
+                background-color: #C9C7D1;
+            }
+            header a{
+                color: #2b2b2b;
+                text-decoration: none;
+            }
+            main{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                margin-bottom: 20em;
+            }
+            .ct{
+
+                display: flex;
+                justify-content: center;
+            }
+            .at{
+
+
+                display: flex;
+                justify-content: space-around;
+            }
+            .button{
+                display: flex;
+                justify-content: space-around;
+            }
+            .md{
+                display: flex;
+                justify-content: space-around;
+            }
+            .auteur{
+
+                background-color: #999999;
+                width: 20%;
+                margin-left: 5px;
+                margin-right: 5px;
+                text-align: center;
+            }
+            article{
+
+                background-color: #999999;
+                width: 20%;
+                margin-left: 5px;
+                margin-right: 5px;
+                text-align: center;
+            }
+
+            footer{
+                background-color: #2b2b2b;
+                min-height: 5%;
+            }
+            footer ul{
+                display: flex;
+                justify-content: center;
+            }
+            footer ul li{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                list-style-type: none;
+                height: 50px;
+                margin-left: 10px;
+                margin-right: 10px;
+                min-width: 80px;
+                text-align: center;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            footer a{
+                color: #e7e7e7;
+                text-decoration: none;
+            }
+        </style>
+        {% endblock %}
+    </head>
+    <body>
+        {% include 'menus/menu.html.twig' %}
+        <main>
+        {% block content %}{% endblock %}
+        </main>
+        {% include 'menus/footer.html.twig' %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

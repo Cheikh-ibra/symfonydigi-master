@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tous les Auteurs{% endblock %}
+
+{% block content %}
+
+    Je suis dans ma page de tous les Auteurs !
+    <div class="md">
+
+   {% for author in authors %}
+       <div class="auteur">
+        <h1> {{ author.id }}
+            {{ author.firstname }}</h1>
+        <div class="button">
+        <a class="btn" href="{{ path('author_show_single', {'id': author.id}) }}"> author </a>
+        <a class="btn" href="{{ path('author_edit', {'id': author.id}) }}"> edit </a>
+            <a class="btn" href="{{ path('author_delete', {'id': author.id}) }}"> suprimer </a>
+        </div>
+    </div>
+
+    {% endfor %}
+
+
+</div>
+{% endblock %}

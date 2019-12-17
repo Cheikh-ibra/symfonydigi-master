@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tous les Articles{% endblock %}
+
+{% block content %}
+    Je suis dans ma page de tous les Articles !
+<div class="at">
+    {% for article in articles %}
+        <article>
+    <h1> {{ article.id }}
+        {{ article.title }}</h1>
+            <h3>{{ article.date | date('d/m/Y') }}</h3>
+
+            <div class="button">
+                <a class="btn" href="{{ path('blog_show_single_article', {'id': article.id}) }}"> article </a>
+                <a class="btn" href="{{ path('blog_edit_article', {'id': article.id}) }}"> edit </a>
+                <a class="btn" href="{{ path('blog_delete_article', {'id': article.id}) }}"> suprimer </a>
+            </div>
+
+        </article>
+
+
+    {% endfor %}
+</div>
+
+{% endblock %}

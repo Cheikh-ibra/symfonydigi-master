@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Suppression de l'article : {{ article.id }}{% endblock %}
+
+{% block content %}
+    Je suis dans ma page de suppression de l'article : {{ article.id }}
+    <h1>supprimer un article:</h1>
+    {{ form(articleForm) }}
+{% endblock %}

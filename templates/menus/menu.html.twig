@@ -1,0 +1,17 @@
+<header >
+    <div class="logo">
+        Mon Super Site
+    </div>
+    <nav>
+        <ul>
+            <a href="{{ path('blog_show_all_articles') }}"><li>Blog</li></a>
+
+            <a href="{{ path('blog_create_article') }}"><li>Créer un Article</li></a>
+
+            <a href="{{ path('app_login', {'id': 'Roman'}) }}"><li> connection</li></a>
+            <a href="{{ path('app_register', {'id': 'Roman'}) }}"><li> crée un compte</li></a>
+
+
+        </ul>
+    </nav>
+</header>

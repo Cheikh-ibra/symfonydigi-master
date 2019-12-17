@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Édition de l'article : {{ article.id }}{% endblock %}
+
+{% block content %}
+    Je suis dans ma page d'édition de l'article : {{ article.id }}
+    <h1>éditer un article:</h1>
+
+    {{ form(articleForm) }}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page de l'article : {{ article.id }}{% endblock %}
+
+{% block content %}
+    Je suis dans ma page de l'article : {{ article.id }} !
+<div class="ct">
+
+    <article>
+        <h1> {{ article.id }}
+            {{ article.title }}</h1>
+        <h3>{{ article.date | date('d/m/Y') }}</h3>
+        <p>{{ article.content }}</p>
+    </article>
+
+</div>
+{% endblock %}

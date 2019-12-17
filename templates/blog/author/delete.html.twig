@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Suppression de l'auteur : {{ author.id }}{% endblock %}
+
+{% block content %}
+    Je suis dans ma page de suppression de l'auteur : {{ author.id }}
+    <h1>supprimer un author:</h1>
+    {{ form(authorForm) }}
+{% endblock %}

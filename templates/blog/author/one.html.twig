@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page de l'auteur : {{ author.firstname }}{% endblock %}
+
+{% block content %}
+    <article>
+    Je suis dans ma page de l'auteur : {{ author.firstname }} !
+    <h1> {{ author.id }}
+        {{ author.firstname }}</h1>
+    <p>{{ author.lastname }}</p>
+    </article>
+{% endblock %}

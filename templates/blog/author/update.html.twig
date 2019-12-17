@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Édition de l'auteur : {{ author.id }}{% endblock %}
+
+{% block content %}
+    Je suis dans ma page d'édition de l'auteur : {{ author.id }}
+    <h1>éditer un author:</h1>
+
+    {{ form(authorForm) }}
+{% endblock %}
